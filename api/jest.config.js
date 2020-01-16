@@ -27,14 +27,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '/src/config/',
-    '/src/middlewares/passport-callback-authenticator.ts',
-    '/src/middlewares/ensure-authenticated.ts',
-    '/src/services/knex-connection.ts',
-    '/src/services/logger.ts',
-    '/src/app.ts',
-  ],
+  coveragePathIgnorePatterns: ['/src/config/', '/src/services/logger.ts', '/src/app.ts'],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -137,7 +130,7 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/spec/**/*.spec.ts'],
+  testMatch: ['**/src/**/*.spec.ts'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
