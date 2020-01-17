@@ -4,7 +4,7 @@ import os from 'os'
 import path from 'path'
 
 import { app } from '../api/src/app'
-import { logger } from '../api/src/services/logger'
+import { logger } from '../api/src/logger'
 import { config } from './config'
 
 app.use(express.static(path.join(__dirname, '../client/build')))
