@@ -24,8 +24,7 @@ export class UserComponent extends React.Component<any, any> {
     ) : (
       <div className="logged-user">
         <div>
-          <h1>{`${me.first_name} ${me.last_name}`}</h1>
-          <span>{me.email}</span>
+          <h1>{me.name}</h1>
         </div>
         <br />
         <button onClick={this.handleGoBackClick}>Go back</button>
@@ -46,9 +45,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const User = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(UserComponent)
-
-export { User }
+export const User = connect(mapStateToProps, mapDispatchToProps)(UserComponent)

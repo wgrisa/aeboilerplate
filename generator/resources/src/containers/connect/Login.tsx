@@ -1,22 +1,21 @@
-import * as React from 'react'
-
-import { config } from '../../config'
-
 import './login.scss'
 
-const Login = () => (
+import * as React from 'react'
+import { withRouter } from 'react-router-dom'
+import * as store from 'store'
+import { routePaths } from '../route-paths'
+
+export const Login = withRouter(({ history }) => (
   <div className="login">
     <p>Sign in with:</p>
-    <a href={config.authUrl.google}>
-      <button>Google</button>
-    </a>
-    <a href={config.authUrl.facebook}>
-      <button>Facebook</button>
-    </a>
-    <a href={config.authUrl.linkedIn}>
-      <button>LinkedIn</button>
-    </a>
-  </div>
-)
+    <button
+      onClick={() => {
+        store.set('token', '123456')
 
-export { Login }
+        history.push(routePaths.private.root)
+      }}
+    >
+      Log me in
+    </button>
+  </div>
+))
