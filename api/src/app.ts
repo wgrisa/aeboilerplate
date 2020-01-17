@@ -2,6 +2,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import express from 'express'
 import RateLimit from 'express-rate-limit'
+import helmet from 'helmet'
 
 import { loadApiRoutes } from './api'
 import { initializeRequestLogger } from './config/request-logger'
@@ -9,6 +10,7 @@ import { initializeRequestLogger } from './config/request-logger'
 const app = express()
 
 app.use(cors())
+app.use(helmet())
 app.use(bodyParser.json())
 
 if (process.env.NODE_ENV !== 'test') {
