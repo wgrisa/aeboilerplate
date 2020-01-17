@@ -1,7 +1,7 @@
 import errorMiddleware from 'error-middleware'
 import express from 'express'
 
-import { me } from './me'
+import { me } from '../me/api'
 
 const router = express.Router()
 

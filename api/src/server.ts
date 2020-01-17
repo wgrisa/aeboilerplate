@@ -3,7 +3,7 @@ import os from 'os'
 
 import { app } from './app'
 import { config } from './config'
-import { logger } from './services/logger'
+import { logger } from './logger'
 
 const startServer = () => {
   app.listen(+config.http.port, config.http.host, () => {

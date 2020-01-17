@@ -2,7 +2,7 @@ import { dump } from 'dumper.js'
 import winston from 'winston'
 import Transport from 'winston-transport'
 
-import { config } from '../config'
+import { config } from './config'
 
 class ObjectDumpTransport extends Transport {
   log(info, callback) {
