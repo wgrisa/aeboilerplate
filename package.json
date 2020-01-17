@@ -12,8 +12,6 @@
     "api-start": "docker-compose up api",
     "api-test-watch": "docker-compose -f docker-compose.test.yml up --remove-orphans",
     "atw": "npm run api-test-watch",
-    "migrate": "npm run migrate --prefix api",
-    "seed": "npm run seed --prefix api",
     "\n# Client commands": "",
     "build-client": "npm i --prefix client --only=dev && npm i --prefix client && npm run build --prefix client",
     "client-npm": "docker-compose run --rm site npm",
@@ -31,13 +29,12 @@
     "install-dependencies": "npm i && npm run client-npm-i && npm run api-npm-i && npm run stop-containers",
     "i": "npm run install-dependencies",
     "build": "npm i && npm run build-client && npm run build-api",
-    "heroku-postbuild": "npm run build",
     "dev": "docker-compose up --remove-orphans",
-    "start": "npm run migrate && ts-node ./server/index.ts"
+    "start": "ts-node ./server/index.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agencyenterprise/ae-node-boilerplate.git"
+    "url": "git+https://github.com/wgrisa/aeboilerplate.git"
   },
   "author": {
     "name": "AE Studio",
@@ -45,9 +42,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/agencyenterprise/ae-node-boilerplate/issues"
+    "url": "https://github.com/wgrisa/aeboilerplate/issues"
   },
-  "homepage": "https://github.com/agencyenterprise/ae-node-boilerplate#readme",
+  "homepage": "https://github.com/wgrisa/aeboilerplate#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
